@@ -6,7 +6,7 @@ body{
 .container{
     width:60%;
     display:flex;
-    justify-content:space-evenly;
+    justify-content:space-between;
     gap:5px;
     background-color:  hsl(0, 0%, 100%);
     border:1px solid  hsl(0, 0%, 100%);
@@ -16,14 +16,37 @@ body{
     border-radius:1rem;
     /* visibility: hidden; */
 }
+@media (max-width:786px) {
+    .container{
+        width: 400px;
+        flex-direction: column-reverse;
+        gap:0px;
+        padding:0;
+        border:0;
+        border-radius:0;
+        margin-top: 0;
+        margin-left:auto;
+        margin-right:auto;
+    }
+}
 .info{
     padding-top:5px;
     padding-left:3rem;
     /* padding-right:1rem; */
 }
+@media (max-width:786px){
+    .info{
+        padding-left: 2rem;
+        padding-right: 2rem;
+         margin-top:-50px ; 
+    }
+}
+
 h1{
     padding-top:32px;
 }
+
+
 /* p{
     padding-top:4px;
 } */
@@ -35,15 +58,37 @@ span{
 #icon{
     vertical-align: middle;
 }
+/* .image-container{
+  width:100%; 
+  height: 100%; */
+
 .image{
-   padding-top: 1rem;
-   padding-bottom:0.5rem;
-   margin-right: -1rem;
+    background-image: url("images/illustration-sign-up-desktop.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height:450px;
+    width:450px;
+    margin-top: 1.5rem;
+    margin-right: -1rem;
+    margin-bottom: 1rem;
+}
+@media (max-width:786px){
+    .image{
+        padding:0;
+        width:475px;
+        background-size:cover;
+        background-repeat: no-repeat;
+        margin-top:0;
+        margin-left:0;
+        margin-right:0;
+        transform: translateX(-37px);
+
+    }
 }
 form{
     padding-top: 1.5rem;
 }
-form >input{
+input{
 width:95%;
 padding-left:10px;
 padding-top: 14px;
@@ -52,6 +97,12 @@ margin-top:10px;
 margin-bottom:25px;
 border-radius:8px;
 border:1px solid hsl(231, 7%, 60%);
+}
+#email-error{
+    font-size:16px;
+    padding-left:7rem;
+    text-align: right;
+    color:hsl(4, 100%, 67%);
 }
 .submit-btn{
     padding-top:12px;
@@ -64,6 +115,16 @@ border:1px solid hsl(231, 7%, 60%);
     font-weight:700 ;
     color:hsl(0, 0%, 100%);
     border:1px solid hsl(4, 100%, 67%);
+}
+@media (max-width:786px){
+    .submit-btn{
+        padding-bottom:12px;
+        padding-top:12px;
+        padding-left: 4rem;
+        padding-right: 4rem;
+        margin-bottom: 3rem;
+
+    }
 }
 /*confirmation message*/
 .container2{
