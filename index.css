@@ -14,7 +14,6 @@ body{
     margin-right:auto;
     margin-top:50px;
     border-radius:1rem;
-    /* visibility: hidden; */
 }
 @media (max-width:786px) {
     .container{
@@ -25,8 +24,8 @@ body{
         border:0;
         border-radius:0;
         margin-top: 0;
-        margin-left:auto;
-        margin-right:auto;
+        margin-left:0;
+        margin-right:0;
     }
 }
 .info{
@@ -101,9 +100,15 @@ border:1px solid hsl(231, 7%, 60%);
 #email-error{
     font-size:16px;
     padding-left:7rem;
-    text-align: right;
+    /* text-align: right; */
     color:hsl(4, 100%, 67%);
 }
+@media (max-width:786px){
+    #email-error{
+        padding-left: 4rem;
+    }
+}
+
 .submit-btn{
     padding-top:12px;
     padding-bottom:12px;
@@ -127,7 +132,7 @@ border:1px solid hsl(231, 7%, 60%);
     }
 }
 /*confirmation message*/
-.container2{
+.success-container{
     width:22%;
     border:1px solid hsl(0, 0%, 100%);
     background-color: hsl(0, 0%, 100%);
@@ -168,7 +173,7 @@ strong{
     font-weight: 700;
     margin-bottom: 2rem;
 }
-/* .display-message.container2{
+/* .display-message.success-container{
     visibility: visible;
 }
 .hide-signup.container{
