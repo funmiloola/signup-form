@@ -145,6 +145,11 @@ border:1px solid hsl(231, 7%, 60%);
     margin-left:auto;
     margin-top:60px;
 }
+@media (max-width:786px){
+    .success-container{
+        width:60%;
+    }
+}
 .icon{
     padding-top:2rem;
 }
@@ -172,6 +177,12 @@ strong{
     color:hsl(0, 0%, 100%);
     font-weight: 700;
     margin-bottom: 2rem;
+}
+@media (max-width:786px){
+    .dismiss-btn{
+        padding-left:50px;
+        padding-right:50px;
+    }
 }
 /* .display-message.success-container{
     visibility: visible;
