@@ -1,13 +1,16 @@
 const emailLabel = document.getElementById("email-label");
 const submitBtn = document.querySelector(".submit-btn");
 const errorMessage = document.getElementById('email-error');
-submitBtn.addEventListener('click',function() {
+submitBtn.addEventListener('click',function(event) {
+event.preventDefault()
   const emailField = document.getElementById("emailField");
   const inputValue = emailField.value;
   const emailFormat = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-    if(emailFormat.test(inputValue)){
+  const inputMail = document.getElementsByClassName('input-mail');
+    if(emailFormat.test(inputValue)) {
       errorMessage.innerHTML = "";
-      window.location.href = "index..html";
+      window.location.href = "success.html";
+      inputMail.innerHTML = inputValue;
     } else {
       errorMessage.innerHTML = "valid email required";
       emailField.style.border = "1px solid hsl(4, 100%, 67%)";
